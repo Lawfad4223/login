@@ -1,0 +1,13 @@
+.carousel-item img{
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+}
+.dropdown-toggle img{
+    width: 2rem;
+    height: 2rem;
+    border-radius:2rem;
+}
+.card{
+    background-color: rgb(238, 238, 238);
+}

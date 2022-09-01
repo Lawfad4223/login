@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,75 +9,183 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <script src="./bootstrap.bundle.min.js"></script>
+   
 </head>
+
 <body>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
     <!---header-->
     <nav class="navbar navbar-expand-lg bg-info">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <button class="btn btn-dark">Login</button>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="./img/images/cristian-castillo-i5mb7Dyt9lk-unsplash.jpg" alt="">
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Wallet</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Payment</a></li>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Login</button>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="./img/images/cristian-castillo-i5mb7Dyt9lk-unsplash.jpg" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Wallet</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Payment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contact Us</a>
+                    </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Contact Us</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-      </nav>
-      <!--coursel-->
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    </nav>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li id="login" class="nav-link active">Login</li>
+                        <li id="reg" class="nav-link ">Register</li>
+                    </ul>
+                </div>
+                
+                <div id="loginform" class="login-form">
+                    <p class="text-center">Login</p>
+                    <form action="" class="m-5">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control">
+                        </div>
+                        <button class="btn btn-primary bt-md w-100 mt-2">Login</button>
+                    </form>
+                    
+                </div>
+                <div id="signupform" class="signup-form">
+                    <p class="text-center">Sign Up</p>
+                    <form class="m-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="fname" class="form-label">First Name</label>
+                                    <input type="text" id="fname" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="lname" class="form-label">Last Name</label>
+                                    <input type="text" id="lname" class="form-control">
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" id="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="pass" class="form-label">Password</label>
+                                <input type="password" id="pass" class="form-control">
+                            </div>
+                        </div>
+                    
+                </div>
+                <div>
+                </div>
+                <div class="row mt-4" >
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="file" class="form-label">File</label>
+                            <input type="file" id="file" class="form-control-file">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-md mt-4">Sign Up</button>
+                        </div>
+                    </div>
+                
+            </div>
+            <div>
+            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--coursel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./img/images/jonny-gios-lACYkBrjSBI-unsplash.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./img/images/matthew-costello-PKdn0ha74Pc-unsplash.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="./img/images/resource-database-GaBX_ooh8-g-unsplash.jpg" class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="./img/images/jonny-gios-lACYkBrjSBI-unsplash.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/images/matthew-costello-PKdn0ha74Pc-unsplash.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/images/resource-database-GaBX_ooh8-g-unsplash.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      <!--section -->
-      <section class="info mt-5">
+    </div>
+    <!--section -->
+    <section class="info mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 mb-2">
@@ -86,9 +195,9 @@
                             <div class="w-75">
                                 <h4 class="text-center">Play Ground</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
@@ -101,9 +210,9 @@
                             <div class="w-75">
                                 <h4 class="text-center">Music and Dance</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
@@ -116,9 +225,9 @@
                             <div class="w-75">
                                 <h4 class="text-center">Arts and Crafts</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
@@ -131,9 +240,9 @@
                             <div class="w-75">
                                 <h4 class="text-center">Safe Transportation</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
@@ -146,9 +255,9 @@
                             <div class="w-75">
                                 <h4 class="text-center">Healthy food</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
@@ -161,18 +270,20 @@
                             <div class="w-75">
                                 <h4 class="text-center">Educational Tour</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Enim repudiandae alias dolorum adipisci
-                                     eius culpa facere quibusdam, tempora consectetur repellendus?
+                                    eius culpa facere quibusdam, tempora consectetur repellendus?
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
 
-      </section>
+    </section>
 
 </body>
+<script src="./bootstrap.bundle.min.js"></script>
+<script src="./scripts.js"></script>
 </html>

@@ -11,3 +11,8 @@
 .card{
     background-color: rgb(238, 238, 238);
 }
+
+.modal-body .nav .active{
+    background-color: rgb(34, 34, 209);
+    color: white;
+}
